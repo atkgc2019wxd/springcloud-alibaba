@@ -1,0 +1,16 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: nacos-payment-provider #当前服务名称
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #配置Nacos地址
+# 激活所有的端点的web方式请求,默认只有 info/health
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
